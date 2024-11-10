@@ -1,0 +1,16 @@
+{
+    "name": "nextjs-on-cloudrun",
+    // dockerイメージ
+    "image": "mcr.microsoft.com/devcontainers/base:ubuntu-22.04",
+    // nodeやpythonなどのインストール設定
+    "features": {
+        "ghcr.io/devcontainers/features/node:1": {}
+    },
+    // 起動時の実行コマンド
+    // 今回はnodejsのパッケージをインストール
+    "postCreateCommand": "pnpm install",
+    // ホスト側のファイルをコンテナにマウントする
+    "mounts": [
+        "source=/Users/yokotatomo/.ssh,target=/home/vscode/.ssh,type=bind,consistency=cached"
+    ]
+}
