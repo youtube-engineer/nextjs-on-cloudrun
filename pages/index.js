@@ -7,9 +7,9 @@ export default function Home() {
   const now = new Date().toLocaleTimeString(); // 非同期処理（ただし、これは非同期で行う必要はありません）
 
   return (
-    <div>
+    <div suppressHydrationWarning>
       <h1>server component</h1>
-      <p>Current time: {now}</p>
+      <p suppressHydrationWarning>Current time: {now}</p>
     </div>
   );
 }
